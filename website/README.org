@@ -1,0 +1,12 @@
+#+title: ConcaveTeam site
+
+[[https://travis-ci.com/ConcaveTeam/concaveteam.github.io][https://travis-ci.com/ConcaveTeam/concaveteam.github.io.svg?branch=master]]
+
+* Dependencies
+- [[https://jekyllrb.com/][jekyll]] :: Static site generator
+
+* Testing
+- Clone this repository
+- Navigate to the cloned repository
+- Run =jekyll server=
+- Point your browser to =localhost:4000=
