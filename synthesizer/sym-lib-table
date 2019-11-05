@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name Synth)(type Legacy)(uri "C:/Users/tjagielski/Documents/Projects/School/Sophomore - Semester 1/POE/Final Project/Major-Lazers/KiCad Files/new_synth/new_synth/Synth.lib")(options "")(descr ""))
   (lib (name new_synth-rescue)(type Legacy)(uri ${KIPRJMOD}/new_synth-rescue.lib)(options "")(descr ""))
+  (lib (name LM324)(type Legacy)(uri "C:/Users/tjagielski/Documents/Projects/School/Sophomore - Semester 1/POE/Final Project/Major-Lazers/synthesizer/LM324/LM324.lib")(options "")(descr ""))
 )
