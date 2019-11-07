@@ -1,17 +1,20 @@
 int laserPin = 13;
 int ledPin = 12; 
-int photoPin = A0;
+int photoPinC = A0;
+int photoPinD = A1;
 int noteC = 11;
 int noteD = 10;
 //int disPin = A1;
 //double disData;
-double photoData;
+double photoDataC;
+double photoDataD;
 
 
 void setup() {                
   pinMode(laserPin, OUTPUT);  // Define the digital output interface pin 13 
   pinMode(ledPin, OUTPUT);
-  pinMode(photoPin, INPUT);
+  pinMode(photoPinC, INPUT);
+  pinMode(photoPinD, INPUT);
   pinMode(noteC, OUTPUT);
   pinMode(noteD, OUTPUT);
   Serial.begin(9600);
@@ -19,19 +22,21 @@ void setup() {
 
 void loop() {
   digitalWrite(laserPin, HIGH); // Open the laser head
-  photoData = analogRead(photoPin);
-  Serial.println(photoData);
+  photoDataC = analogRead(photoPinC);
+  photoDataD = analogRead(photoPinD);
 
-  if (photoData < 945){
+  if (photoDataC < 945){
     digitalWrite(ledPin, HIGH);
+    digitalWrite(noteD, LOW);
     digitalWrite(noteC, HIGH);
-    delay(1000);
+  }else if (photoDataD < 945){
+    digitalWrite(ledPin, HIGH);
     digitalWrite(noteC, LOW);
     digitalWrite(noteD, HIGH);
-    delay(1000);
-    digitalWrite(noteD, LOW);
-  }else{
+  }
+  else{
     digitalWrite(ledPin, LOW);
     digitalWrite(noteC, LOW);
+    digitalWrite(noteD, LOW);
   }
 }
