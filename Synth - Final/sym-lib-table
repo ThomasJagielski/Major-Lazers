@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name Synth)(type Legacy)(uri "C:/Users/tjagielski/Documents/Projects/School/Sophomore - Semester 1/POE/Final Project/Major-Lazers/KiCad Files/new_synth/new_synth/Synth.lib")(options "")(descr ""))
+  (lib (name new_synth-rescue)(type Legacy)(uri ${KIPRJMOD}/new_synth-rescue.lib)(options "")(descr ""))
+  (lib (name LM324)(type Legacy)(uri "C:/Users/tjagielski/Documents/Projects/School/Sophomore - Semester 1/POE/Final Project/Major-Lazers/synthesizer/LM324/LM324.lib")(options "")(descr ""))
+  (lib (name NCP1117DT33T5G)(type Legacy)(uri ${KIPRJMOD}/ul_NCP1117DT33T5G/KiCAD/2019-11-05_18-49-15/NCP1117DT33T5G.lib)(options "")(descr ""))
+  (lib (name BAT60JFILM)(type Legacy)(uri ${KIPRJMOD}/ul_BAT60JFILM/KiCAD/2019-11-06_17-02-00/BAT60JFILM.lib)(options "")(descr ""))
+)

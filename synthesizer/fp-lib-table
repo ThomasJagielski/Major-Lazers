@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name LM324)(type Legacy)(uri "C:/Users/tjagielski/Documents/Projects/School/Sophomore - Semester 1/POE/Final Project/Major-Lazers/synthesizer/LM324/LM324.mod")(options "")(descr ""))
+  (lib (name NCP1117)(type KiCad)(uri ${KIPRJMOD}/ul_NCP1117DT33T5G/KiCAD/2019-11-05_18-49-15/footprints.pretty)(options "")(descr ""))
+)

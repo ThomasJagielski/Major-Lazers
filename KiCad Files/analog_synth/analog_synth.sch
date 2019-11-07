@@ -1,0 +1,490 @@
+EESchema Schematic File Version 4
+LIBS:analog_synth-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 5DB5B511
+P 900 1900
+F 0 "R1" V 693 1900 50  0000 C CNN
+F 1 "R_100K" V 784 1900 50  0000 C CNN
+F 2 "" V 830 1900 50  0001 C CNN
+F 3 "~" H 900 1900 50  0001 C CNN
+	1    900  1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5DB5B5D2
+P 900 2200
+F 0 "R2" V 693 2200 50  0000 C CNN
+F 1 "R_57K" V 784 2200 50  0000 C CNN
+F 2 "" V 830 2200 50  0001 C CNN
+F 3 "~" H 900 2200 50  0001 C CNN
+	1    900  2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Amplifier_Operational:NE5532 U1
+U 1 1 5DB5B69F
+P 1850 2050
+F 0 "U1" H 1850 2417 50  0000 C CNN
+F 1 "NE5532" H 1850 2326 50  0000 C CNN
+F 2 "" H 1850 2050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 1850 2050 50  0001 C CNN
+	1    1850 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  2200 750  1900
+Wire Wire Line
+	750  1900 750  1550
+Connection ~ 750  1900
+Text Label 750  1550 2    50   ~ 0
+V_in
+Wire Wire Line
+	1050 2200 1050 2150
+Wire Wire Line
+	1050 2150 1500 2150
+Wire Wire Line
+	1050 1900 1050 1950
+Wire Wire Line
+	1050 1950 1400 1950
+$Comp
+L Device:C C1
+U 1 1 5DB5BB9D
+P 1850 2600
+F 0 "C1" V 1598 2600 50  0000 C CNN
+F 1 "C_1uF" V 1689 2600 50  0000 C CNN
+F 2 "" H 1888 2450 50  0001 C CNN
+F 3 "~" H 1850 2600 50  0001 C CNN
+	1    1850 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1700 2600 1500 2600
+Wire Wire Line
+	1500 2600 1500 2150
+Connection ~ 1500 2150
+Wire Wire Line
+	1500 2150 1550 2150
+Wire Wire Line
+	2000 2600 2200 2600
+Wire Wire Line
+	2200 2600 2200 2050
+Wire Wire Line
+	2200 2050 2150 2050
+$Comp
+L Amplifier_Operational:NE5532 U2
+U 1 1 5DB5BCC6
+P 4100 2150
+F 0 "U2" H 4100 2517 50  0000 C CNN
+F 1 "NE5532" H 4100 2426 50  0000 C CNN
+F 2 "" H 4100 2150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 4100 2150 50  0001 C CNN
+	1    4100 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2250 3800 2400
+Wire Wire Line
+	3800 2400 4400 2400
+Wire Wire Line
+	4400 2400 4400 2150
+Wire Wire Line
+	4400 2150 4800 2150
+Connection ~ 4400 2150
+Text Label 4800 2150 0    50   ~ 0
+Tri_out
+$Comp
+L Amplifier_Operational:NE5532 U3
+U 1 1 5DB5C27E
+P 3200 1450
+F 0 "U3" H 3200 1817 50  0000 C CNN
+F 1 "NE5532" H 3200 1726 50  0000 C CNN
+F 2 "" H 3200 1450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 3200 1450 50  0001 C CNN
+	1    3200 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5DB5C36A
+P 1400 1550
+F 0 "R3" H 1470 1596 50  0000 L CNN
+F 1 "R_57K" H 1470 1505 50  0000 L CNN
+F 2 "" V 1330 1550 50  0001 C CNN
+F 3 "~" H 1400 1550 50  0001 C CNN
+	1    1400 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 1400 1400 1350
+Wire Wire Line
+	1400 1350 1150 1350
+Wire Wire Line
+	1150 1350 1150 1400
+$Comp
+L power:GND #PWR01
+U 1 1 5DB5C514
+P 1150 1400
+F 0 "#PWR01" H 1150 1150 50  0001 C CNN
+F 1 "GND" H 1155 1227 50  0000 C CNN
+F 2 "" H 1150 1400 50  0001 C CNN
+F 3 "" H 1150 1400 50  0001 C CNN
+	1    1150 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 1700 1400 1950
+Connection ~ 1400 1950
+Wire Wire Line
+	1400 1950 1550 1950
+$Comp
+L Transistor_BJT:2N3904 Q1
+U 1 1 5DB5CBC4
+P 1400 3100
+F 0 "Q1" H 1591 3146 50  0000 L CNN
+F 1 "2N3904" H 1591 3055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1600 3025 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 1400 3100 50  0001 L CNN
+	1    1400 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2900 1500 2600
+Connection ~ 1500 2600
+$Comp
+L power:GND #PWR02
+U 1 1 5DB5D8AE
+P 1500 3300
+F 0 "#PWR02" H 1500 3050 50  0001 C CNN
+F 1 "GND" H 1505 3127 50  0000 C CNN
+F 2 "" H 1500 3300 50  0001 C CNN
+F 3 "" H 1500 3300 50  0001 C CNN
+	1    1500 3300
+	1    0    0    -1  
+$EndComp
+Connection ~ 1400 1350
+$Comp
+L Device:R R4
+U 1 1 5DB5DAF5
+P 1900 1350
+F 0 "R4" V 1693 1350 50  0000 C CNN
+F 1 "R_100K" V 1784 1350 50  0000 C CNN
+F 2 "" V 1830 1350 50  0001 C CNN
+F 3 "~" H 1900 1350 50  0001 C CNN
+	1    1900 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5DB5DDB0
+P 2600 1350
+F 0 "R6" V 2393 1350 50  0000 C CNN
+F 1 "R_57K" V 2484 1350 50  0000 C CNN
+F 2 "" V 2530 1350 50  0001 C CNN
+F 3 "~" H 2600 1350 50  0001 C CNN
+	1    2600 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5DB5DFCA
+P 3250 850
+F 0 "R8" V 3043 850 50  0000 C CNN
+F 1 "R_100K" V 3134 850 50  0000 C CNN
+F 2 "" V 3180 850 50  0001 C CNN
+F 3 "~" H 3250 850 50  0001 C CNN
+	1    3250 850 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5DB5E217
+P 2250 1000
+F 0 "R5" H 2180 954 50  0000 R CNN
+F 1 "R_100K" H 2180 1045 50  0000 R CNN
+F 2 "" V 2180 1000 50  0001 C CNN
+F 3 "~" H 2250 1000 50  0001 C CNN
+	1    2250 1000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR03
+U 1 1 5DB5E8A2
+P 2250 850
+F 0 "#PWR03" H 2250 700 50  0001 C CNN
+F 1 "VCC" H 2267 1023 50  0000 C CNN
+F 2 "" H 2250 850 50  0001 C CNN
+F 3 "" H 2250 850 50  0001 C CNN
+	1    2250 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 1350 1750 1350
+Wire Wire Line
+	2050 1350 2250 1350
+Connection ~ 2250 1350
+Wire Wire Line
+	2250 1350 2450 1350
+$Comp
+L Device:R R7
+U 1 1 5DB5F354
+P 2700 2800
+F 0 "R7" V 2493 2800 50  0000 C CNN
+F 1 "R_100K" V 2584 2800 50  0000 C CNN
+F 2 "" V 2630 2800 50  0001 C CNN
+F 3 "~" H 2700 2800 50  0001 C CNN
+	1    2700 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1200 2800 1200 3100
+Wire Wire Line
+	2900 1550 2200 1550
+Connection ~ 2200 2050
+Wire Wire Line
+	2750 1350 2850 1350
+Wire Wire Line
+	2850 1350 2850 850 
+Connection ~ 2850 1350
+Wire Wire Line
+	2850 1350 2900 1350
+Wire Wire Line
+	3650 850  3650 1450
+Wire Wire Line
+	2850 850  3100 850 
+Wire Wire Line
+	2200 1550 2200 2050
+Connection ~ 3650 1450
+Wire Wire Line
+	3650 1450 3650 2800
+Wire Wire Line
+	3500 1450 3650 1450
+Wire Wire Line
+	3400 850  3650 850 
+Wire Wire Line
+	3800 2050 2200 2050
+Wire Wire Line
+	2550 2800 1200 2800
+Wire Wire Line
+	2850 2800 3650 2800
+Wire Wire Line
+	2250 1150 2250 1350
+Text Notes 3100 3500 2    197  ~ 39
+VCO\n
+Wire Notes Line
+	5150 3600 5150 450 
+Text Label 5800 2150 2    50   ~ 0
+V_in
+$Comp
+L Device:C C?
+U 1 1 5DB5F591
+P 6400 2650
+F 0 "C?" V 6148 2650 50  0000 C CNN
+F 1 "C" V 6239 2650 50  0000 C CNN
+F 2 "" H 6438 2500 50  0001 C CNN
+F 3 "~" H 6400 2650 50  0001 C CNN
+	1    6400 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Amplifier_Operational:NE5532 U?
+U 1 1 5DB5F6BB
+P 6450 2050
+F 0 "U?" H 6450 2417 50  0000 C CNN
+F 1 "NE5532" H 6450 2326 50  0000 C CNN
+F 2 "" H 6450 2050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 6450 2050 50  0001 C CNN
+	1    6450 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2150 6000 2150
+Wire Wire Line
+	6000 2150 6000 2650
+Wire Wire Line
+	6550 2650 6900 2650
+Wire Wire Line
+	6900 2650 6900 2050
+Wire Wire Line
+	6900 2050 6750 2050
+Wire Wire Line
+	6150 2150 6000 2150
+Connection ~ 6000 2150
+Wire Wire Line
+	6250 2650 6000 2650
+$Comp
+L power:GND #PWR?
+U 1 1 5DB64B15
+P 5300 1950
+F 0 "#PWR?" H 5300 1700 50  0001 C CNN
+F 1 "GND" H 5305 1777 50  0000 C CNN
+F 2 "" H 5300 1950 50  0001 C CNN
+F 3 "" H 5300 1950 50  0001 C CNN
+	1    5300 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 1950 6150 1950
+$Comp
+L Device:R R?
+U 1 1 5DB65C6F
+P 6950 950
+F 0 "R?" H 7020 996 50  0000 L CNN
+F 1 "R" H 7020 905 50  0000 L CNN
+F 2 "" V 6880 950 50  0001 C CNN
+F 3 "~" H 6950 950 50  0001 C CNN
+	1    6950 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5DB65CDE
+P 6950 800
+F 0 "#PWR?" H 6950 650 50  0001 C CNN
+F 1 "VCC" H 6967 973 50  0000 C CNN
+F 2 "" H 6950 800 50  0001 C CNN
+F 3 "" H 6950 800 50  0001 C CNN
+	1    6950 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q?
+U 1 1 5DB65FD5
+P 6850 1300
+F 0 "Q?" H 7041 1346 50  0000 L CNN
+F 1 "2N3904" H 7041 1255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7050 1225 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 6850 1300 50  0001 L CNN
+	1    6850 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q?
+U 1 1 5DB6796C
+P 8050 1300
+F 0 "Q?" H 8241 1346 50  0000 L CNN
+F 1 "2N3904" H 8241 1255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8250 1225 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 8050 1300 50  0001 L CNN
+	1    8050 1300
+	-1   0    0    -1  
+$EndComp
+Text Notes 7850 1050 2    50   ~ 0
+Thermally Bonded
+$Comp
+L Device:R R?
+U 1 1 5DB6C403
+P 7450 1750
+F 0 "R?" H 7520 1796 50  0000 L CNN
+F 1 "R" H 7520 1705 50  0000 L CNN
+F 2 "" V 7380 1750 50  0001 C CNN
+F 3 "~" H 7450 1750 50  0001 C CNN
+	1    7450 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 1500 6950 1600
+Wire Wire Line
+	6950 1600 7450 1600
+Wire Wire Line
+	7450 1600 7950 1600
+Wire Wire Line
+	7950 1600 7950 1500
+Connection ~ 7450 1600
+Wire Wire Line
+	7450 1900 7450 2050
+Wire Wire Line
+	7450 2050 6900 2050
+Connection ~ 6900 2050
+Wire Wire Line
+	6000 2150 6000 1300
+Wire Wire Line
+	6000 1300 6650 1300
+$Comp
+L power:GND #PWR?
+U 1 1 5DB6EAF7
+P 8250 1300
+F 0 "#PWR?" H 8250 1050 50  0001 C CNN
+F 1 "GND" H 8255 1127 50  0000 C CNN
+F 2 "" H 8250 1300 50  0001 C CNN
+F 3 "" H 8250 1300 50  0001 C CNN
+	1    8250 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:NE5532 U?
+U 1 1 5DB6EC1F
+P 8900 1400
+F 0 "U?" H 8900 1767 50  0000 C CNN
+F 1 "NE5532" H 8900 1676 50  0000 C CNN
+F 2 "" H 8900 1400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 8900 1400 50  0001 C CNN
+	1    8900 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 1300 8250 1300
+Connection ~ 8250 1300
+Text Notes 9250 900  2    50   ~ 0
+Pos Rail - VCC\nNeg Rail - VEE\n
+Wire Wire Line
+	7950 1100 8400 1100
+Wire Wire Line
+	8400 1100 8400 1500
+Wire Wire Line
+	8400 1500 8600 1500
+Wire Wire Line
+	8400 1500 8400 1850
+Wire Wire Line
+	8400 1850 8650 1850
+Connection ~ 8400 1500
+$Comp
+L Device:R R?
+U 1 1 5DB72625
+P 8800 1850
+F 0 "R?" V 8593 1850 50  0000 C CNN
+F 1 "R" V 8684 1850 50  0000 C CNN
+F 2 "" V 8730 1850 50  0001 C CNN
+F 3 "~" H 8800 1850 50  0001 C CNN
+	1    8800 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Variable R?
+U 1 1 5DB72704
+P 9100 1850
+F 0 "R?" V 8855 1850 50  0000 C CNN
+F 1 "R_Variable" V 8946 1850 50  0000 C CNN
+F 2 "" V 9030 1850 50  0001 C CNN
+F 3 "~" H 9100 1850 50  0001 C CNN
+	1    9100 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9250 1850 9450 1850
+Wire Wire Line
+	9450 1850 9450 1400
+Wire Wire Line
+	9450 1400 9200 1400
+Text Label 9450 1400 0    50   ~ 0
+V_in(VCO)
+Text Notes 9350 3350 2    197  ~ 39
+EXPONENTIAL CONVERTER
+Wire Notes Line
+	450  3600 11250 3600
+$EndSCHEMATC
