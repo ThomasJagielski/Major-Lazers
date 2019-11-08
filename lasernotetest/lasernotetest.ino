@@ -1,5 +1,6 @@
 int laserPin = 13;
-int ledPin = 12; 
+int ledPinC = 12;
+int ledPinD = 9;
 int photoPinC = A0;
 int photoPinD = A1;
 int noteC = 11;
@@ -12,7 +13,8 @@ double photoDataD;
 
 void setup() {                
   pinMode(laserPin, OUTPUT);  // Define the digital output interface pin 13 
-  pinMode(ledPin, OUTPUT);
+  pinMode(ledPinC, OUTPUT);
+  pinMode(ledPinD, OUTPUT);
   pinMode(photoPinC, INPUT);
   pinMode(photoPinD, INPUT);
   pinMode(noteC, OUTPUT);
@@ -26,16 +28,19 @@ void loop() {
   photoDataD = analogRead(photoPinD);
 
   if (photoDataC < 945){
-    digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPinD, LOW);
+    digitalWrite(ledPinC, HIGH);
     digitalWrite(noteD, LOW);
     digitalWrite(noteC, HIGH);
   }else if (photoDataD < 945){
-    digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPinC, LOW);
+    digitalWrite(ledPinD, HIGH);
     digitalWrite(noteC, LOW);
     digitalWrite(noteD, HIGH);
   }
   else{
-    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPinC, LOW);
+    digitalWrite(ledPinD, LOW);
     digitalWrite(noteC, LOW);
     digitalWrite(noteD, LOW);
   }
