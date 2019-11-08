@@ -26,27 +26,17 @@ void loop() {
   digitalWrite(laserPin, HIGH); // Open the laser head
   photoDataC = analogRead(photoPinC);
   photoDataD = analogRead(photoPinD);
-//  Serial.print("C: ");
-//  Serial.print(photoDataC);
-//  Serial.println();
-  Serial.print("D: ");
-  Serial.print(photoDataD);
-  Serial.println();
-  
-  if (photoDataC < 945){
+  Serial.println(photoDataC);
+  if (photoDataC < 952){
     digitalWrite(ledPinD, LOW);
     digitalWrite(ledPinC, HIGH);
     digitalWrite(noteD, LOW);
     digitalWrite(noteC, HIGH);
-//    Serial.print("playing c");
-//    Serial.println();
-  }else if (photoDataD < 945){
+  }else if (photoDataD > 400){
     digitalWrite(ledPinC, LOW);
     digitalWrite(ledPinD, HIGH);
     digitalWrite(noteC, LOW);
     digitalWrite(noteD, HIGH);
-//    Serial.print("playing d");
-//    Serial.println();
   }
   else{
     digitalWrite(ledPinC, LOW);
