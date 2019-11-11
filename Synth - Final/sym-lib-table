@@ -4,4 +4,7 @@
   (lib (name LM324)(type Legacy)(uri "C:/Users/tjagielski/Documents/Projects/School/Sophomore - Semester 1/POE/Final Project/Major-Lazers/synthesizer/LM324/LM324.lib")(options "")(descr ""))
   (lib (name NCP1117DT33T5G)(type Legacy)(uri ${KIPRJMOD}/ul_NCP1117DT33T5G/KiCAD/2019-11-05_18-49-15/NCP1117DT33T5G.lib)(options "")(descr ""))
   (lib (name BAT60JFILM)(type Legacy)(uri ${KIPRJMOD}/ul_BAT60JFILM/KiCAD/2019-11-06_17-02-00/BAT60JFILM.lib)(options "")(descr ""))
+  (lib (name LM555CM)(type Legacy)(uri "C:/Users/tjagielski/Documents/Projects/School/Sophomore - Semester 1/POE/Final Project/Major-Lazers/Synth - Final/LM555CM.lib")(options "")(descr ""))
+  (lib (name SN7402HC02NSR)(type Legacy)(uri ${KIPRJMOD}/ul_SN74HC02NSR/KiCAD/2019-11-09_14-53-27/2019-11-09_14-53-27.lib)(options "")(descr ""))
+  (lib (name dk_USB-DVI-HDMI-Connectors)(type Legacy)(uri C:/Users/tjagielski/Documents/KICAD/digikey-kicad-library/digikey-symbols/dk_USB-DVI-HDMI-Connectors.lib)(options "")(descr ""))
 )

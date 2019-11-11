@@ -1,0 +1,30 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# FA-128_32.0000MF20X-K5
+#
+DEF FA-128_32.0000MF20X-K5 Y 0 40 Y Y 1 L N
+F0 "Y" -302 240 50 H V L BNN
+F1 "FA-128_32.0000MF20X-K5" -302 -359 50 H V L BNN
+F2 "OSCCC200X160X50N" 0 0 50 H I L BNN
+F3 "SER4079CT-ND" 0 0 50 H I L BNN
+F4 "https://www.digikey.com/product-detail/en/epson/FA-128-32.0000MF20X-K5/SER4079CT-ND/5994864?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" 0 0 50 H I L BNN
+F5 "SMD-4 Epson" 0 0 50 H I L BNN
+F6 "FA-128 32.0000MF20X-K5" 0 0 50 H I L BNN
+F7 "Crystal 32MHz ±10ppm _Tol_ ±20ppm _Stability_ 10pF FUND 60Ohm 4-Pin Mini-SMD" 0 0 50 H I L BNN
+F8 "EPSON" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 16 -300 200 300 200 N
+P 2 0 0 16 300 200 300 -200 N
+P 2 0 0 16 300 -200 -300 -200 N
+P 2 0 0 16 -300 -200 -300 200 N
+X IN 1 -500 100 200 R 40 40 0 0 I 
+X OUT 2 500 100 200 L 40 40 0 0 O 
+X GND 3 500 -100 200 L 40 40 0 0 W 
+X GND 4 500 -100 200 L 40 40 0 0 W 
+ENDDRAW
+ENDDEF
+#
+# End Library
