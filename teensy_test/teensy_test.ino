@@ -20,6 +20,6 @@ void loop() {
   osc1 = analogRead(osc1_pin);
   osc2 = analogRead(osc2_pin);
   adsr = analogRead(adsr_pin);
-  output_signal = (((osc1 + osc2) * 1)*0.5)-500;
+  output_signal = (((osc1 + osc2) * 1)*(0.00055 * adsr))-300;
   analogWrite(signal_pin, output_signal-4);
 }
