@@ -25,6 +25,7 @@ void setup() {
   pinMode(osc6_pin,INPUT);
   pinMode(adsr_pin,INPUT);
   pinMode(signal_pin,OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
@@ -36,6 +37,14 @@ void loop() {
   osc5 = analogRead(osc5_pin);
   osc6 = analogRead(osc6_pin);
   adsr = analogRead(adsr_pin);
-  output_signal = (((osc1 + osc2 + osc3 + osc4) * 0.2))-300;// + osc2 + osc3 + osc4 + osc5 + osc6))/7)-300;// * 1)*(0.00055 * adsr))-300;
+  if (adsr > 600){
+    adsr == 0;
+    }
+  else {
+    adsr == 1;
+  }
+    
+  output_signal = (((osc1 + osc2 + osc3 + osc4) * 0.2))-300 * adsr;// + osc2 + osc3 + osc4 + osc5 + osc6))/7)-300;// * 1)*(0.00055 * adsr))-300;
   analogWrite(signal_pin, output_signal);
+  Serial.println(adsr);
 }
