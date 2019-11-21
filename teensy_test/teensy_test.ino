@@ -14,7 +14,7 @@ float osc5 = 0.0;
 float osc6 = 0.0;
 float adsr = 0.0;
 float output_signal = 0.0;
-
+int a;
 void setup() {
   // put your setup code here, to run once:
   pinMode(osc1_pin,INPUT);
@@ -37,14 +37,14 @@ void loop() {
   osc5 = analogRead(osc5_pin);
   osc6 = analogRead(osc6_pin);
   adsr = analogRead(adsr_pin);
-  if (adsr > 600){
-    adsr == 0;
+  if (adsr > 100){
+    a =1;
     }
   else {
-    adsr == 1;
+    a = 0;
   }
     
-  output_signal = (((osc1 + osc2 + osc3 + osc4) * 0.2))-300 * adsr;// + osc2 + osc3 + osc4 + osc5 + osc6))/7)-300;// * 1)*(0.00055 * adsr))-300;
+  output_signal = (((osc1 + osc2 + osc3 + osc4) * 0.2))-300 * a;// + osc2 + osc3 + osc4 + osc5 + osc6))/7)-300;// * 1)*(0.00055 * adsr))-300;
   analogWrite(signal_pin, output_signal);
-  Serial.println(adsr);
+  Serial.println(a);
 }
