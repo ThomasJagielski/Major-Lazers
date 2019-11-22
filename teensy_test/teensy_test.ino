@@ -23,7 +23,6 @@ int adsr = 0;
 long output_signal = 0.0;
 int a,b,c,d,e,f,g;
 void setup() {
-  // put your setup code here, to run once:
   pinMode(osc1_pin,INPUT);
   pinMode(osc2_pin,INPUT);
   pinMode(osc3_pin,INPUT);
