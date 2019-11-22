@@ -21,7 +21,6 @@ int osc1,osc2,osc3,osc4,osc5,osc6,osc7;
 int dio1,dio2,dio3,dio4,dio5,dio6,dio7;
 int adsr = 0;
 long output_signal = 0.0;
-long output_sig_adsr = 0.0;
 int a,b,c,d,e,f,g;
 void setup() {
   // put your setup code here, to run once:
@@ -109,13 +108,9 @@ void loop() {
     g = 0;
   }
     
-  adsr = analogRead(adsr_pin);
-  output_signal = ((((osc2 * a) + (osc4 * b) + (osc7 * c)) / (a+b+c))-300)*0.2;
-  output_sig_adsr = output_signal * adsr * 0.00005;
-//  Serial.print("DIO1 = "); Serial.print(dio1); Serial.println();
- // Serial.print(b); Serial.println();
-  Serial.print(c); Serial.println();
-//  Serial.print("DIO2 = "); Serial.print(dio2); Serial.println();  
+//  adsr = analogRead(adsr_pin);
+  output_signal = ((((osc2 * a) + (osc5 * b) + (osc7 * c)) / (a+b+c))-300)*0.4;
+  
   //output_signal = (((((osc1 * a) + (osc2 * b) + (osc3 * c) + (osc4 * d) + (osc5 * e) + (osc6 * f) + (osc7 * g))/(a+b+c+d+e+f+g)) * (0.00055 * adsr)) *  0.2) - 300;
-  analogWrite(signal_pin, output_sig_adsr);
+  analogWrite(signal_pin, output_signal);
 }
