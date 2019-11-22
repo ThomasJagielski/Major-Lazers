@@ -7,4 +7,5 @@
   (lib (name LM555CM)(type Legacy)(uri "C:/Users/tjagielski/Documents/Projects/School/Sophomore - Semester 1/POE/Final Project/Major-Lazers/Synth - Final/LM555CM.lib")(options "")(descr ""))
   (lib (name SN7402HC02NSR)(type Legacy)(uri ${KIPRJMOD}/ul_SN74HC02NSR/KiCAD/2019-11-09_14-53-27/2019-11-09_14-53-27.lib)(options "")(descr ""))
   (lib (name dk_USB-DVI-HDMI-Connectors)(type Legacy)(uri C:/Users/tjagielski/Documents/KICAD/digikey-kicad-library/digikey-symbols/dk_USB-DVI-HDMI-Connectors.lib)(options "")(descr ""))
+  (lib (name new_synth_transistor-rescue)(type Legacy)(uri ${KIPRJMOD}/new_synth_transistor-rescue.lib)(options "")(descr ""))
 )
