@@ -17,10 +17,11 @@ const int dio7_pin = A20;
 const int adsr_pin = A2;
 
 const int signal_pin = A22;
-float osc1,osc2,osc3,osc4,osc5,osc6,osc7;
-float dio1,dio2,dio3,dio4,dio5,dio6,dio7;
-float adsr = 0.0;
-float output_signal = 0.0;
+int osc1,osc2,osc3,osc4,osc5,osc6,osc7;
+int dio1,dio2,dio3,dio4,dio5,dio6,dio7;
+int adsr = 0;
+long output_signal = 0.0;
+long output_sig_adsr = 0.0;
 int a,b,c,d,e,f,g;
 void setup() {
   // put your setup code here, to run once:
@@ -54,49 +55,54 @@ void loop() {
   osc7 = analogRead(osc7_pin);
 
   dio1 = analogRead(dio1_pin);
-  if (dio1 > 100){
+  if (dio1 > 300){
     a = 1;
     }
   else {
     a = 0;
   }
   dio2 = analogRead(dio2_pin);
-  if (dio2 > 100){
+  if (dio2 > 300){
     b = 1;
     }
   else {
     b = 0;
   }
   dio3 = analogRead(dio3_pin);
-  if (dio3 > 100){
+  if (dio3 > 300){
     c = 1;
     }
   else {
     c = 0;
   }
   dio4 = analogRead(dio4_pin);
-  if (dio4 > 100){
+  if (dio4 > 300){
     d = 1;
     }
   else {
     d = 0;
   }
   dio5 = analogRead(dio5_pin);
-  if (dio5 > 100){
+  if (dio5 > 300){
     e = 1;
     }
   else {
     e = 0;
   }
   dio6 = analogRead(dio6_pin);
-  if (dio6 > 100){
+  if (dio6 > 300){
     f = 1;
     }
   else {
     f = 0;
   }
   dio7 = analogRead(dio7_pin);
-  if (dio7 > 100){
+  // if (dio7 < 300) dio7 = 0;
+
+
+
+  
+  if (dio7 > 300){
     g = 1;
     }
   else {
@@ -104,7 +110,12 @@ void loop() {
   }
     
   adsr = analogRead(adsr_pin);
-  output_signal = ((((osc1 * 0) + (osc2 * 0) + (osc3 * 0)) * (1)));
+  output_signal = ((((osc2 * a) + (osc4 * b) + (osc7 * c)) / (a+b+c))-300)*0.2;
+  output_sig_adsr = output_signal * adsr * 0.00005;
+//  Serial.print("DIO1 = "); Serial.print(dio1); Serial.println();
+ // Serial.print(b); Serial.println();
+  Serial.print(c); Serial.println();
+//  Serial.print("DIO2 = "); Serial.print(dio2); Serial.println();  
   //output_signal = (((((osc1 * a) + (osc2 * b) + (osc3 * c) + (osc4 * d) + (osc5 * e) + (osc6 * f) + (osc7 * g))/(a+b+c+d+e+f+g)) * (0.00055 * adsr)) *  0.2) - 300;
-  analogWrite(signal_pin, output_signal);
+  analogWrite(signal_pin, output_sig_adsr);
 }
