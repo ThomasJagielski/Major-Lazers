@@ -1,10 +1,11 @@
 (fp_lib_table
-  (lib (name LM324)(type Legacy)(uri "C:/Users/tjagielski/Documents/Projects/School/Sophomore - Semester 1/POE/Final Project/Major-Lazers/synthesizer/LM324/LM324.mod")(options "")(descr ""))
+  (lib (name LM324)(type Legacy)(uri /home/dpatel1/Documents/Academics/Major-Lazers/synthesizer/LM324/LM324.mod)(options "")(descr ""))
   (lib (name NCP1117)(type KiCad)(uri ${KIPRJMOD}/ul_NCP1117DT33T5G/KiCAD/2019-11-05_18-49-15/footprints.pretty)(options "")(descr ""))
   (lib (name BAT60JFILM)(type KiCad)(uri ${KIPRJMOD}/ul_BAT60JFILM/KiCAD/2019-11-06_17-02-00/footprints.pretty)(options "")(descr ""))
   (lib (name FA-128_32.0000MF20X-K5)(type Legacy)(uri ${KIPRJMOD}/FA-128_32.0000MF20X-K5/FA-128_32.0000MF20X-K5.mod)(options "")(descr ""))
   (lib (name LM555CM)(type Legacy)(uri ${KIPRJMOD}/LM555CM/LM555CM.mod)(options "")(descr ""))
   (lib (name SN74HC02NSR)(type KiCad)(uri ${KIPRJMOD}/ul_SN74HC02NSR/KiCAD/2019-11-09_14-53-27/footprints.pretty)(options "")(descr ""))
-  (lib (name digikey-footprints)(type KiCad)(uri C:/Users/tjagielski/Documents/KICAD/digikey-kicad-library/digikey-footprints.pretty)(options "")(descr ""))
+  (lib (name digikey-footprints)(type KiCad)(uri "/home/dpatel1/Documents/Academics/Major-Lazers/KiCad Files/new_synth/new_synth/ul_CD74HCT4066QPWRQ1/KiCAD/2019-10-30_02-59-54/footprints.pretty")(options "")(descr ""))
   (lib (name AU-Y1007)(type Legacy)(uri ${KIPRJMOD}/AU-Y1007/AU-Y1007.mod)(options "")(descr ""))
+  (lib (name synthesizer)(type KiCad)(uri /home/dpatel1/Documents/Academics/Major-Lazers/synthesizer)(options "")(descr ""))
 )
