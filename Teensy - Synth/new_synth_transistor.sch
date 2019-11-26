@@ -195,10 +195,10 @@ F 8 "SOIC-14 Texas Instruments" H 21850 2600 50  0001 L BNN "Field8"
 	1    0    0    1   
 $EndComp
 $Comp
-L LM324:LM324 U2
+L LM324:LM324 U12
 U 3 1 5DC68B40
 P 19500 4900
-F 0 "U2" H 19500 5270 50  0000 C CNN
+F 0 "U12" H 19500 5270 50  0000 C CNN
 F 1 "LM324" H 19500 5179 50  0000 C CNN
 F 2 "LM324:SOIC127P600X175-14N" H 19500 4900 50  0001 L BNN
 F 3 "" H 19500 4900 50  0001 L BNN
@@ -210,7 +210,6 @@ F 8 "SOIC-14 Texas Instruments" H 19500 4900 50  0001 L BNN "Field8"
 	3    19500 4900
 	-1   0    0    -1  
 $EndComp
-Connection ~ 19200 4900
 $Comp
 L power:VCC #PWR055
 U 1 1 5DC3BA2C
@@ -1320,7 +1319,7 @@ P 2650 1400
 F 0 "U2" H 2650 850 50  0000 C CNN
 F 1 "LM324" H 2650 950 50  0000 C CNN
 F 2 "LM324:SOIC127P600X175-14N" H 2650 1400 50  0001 L BNN
-F 3 "these devices consist of four independent high-gain frequency-compensated operational amplifiers that are designed sp..." H 2650 1400 50  0001 L BNN
+F 3 "" H 2650 1400 50  0001 L BNN
 F 4 "Texas Instruments" H 2650 1400 50  0001 L BNN "Field4"
 F 5 "Unavailable" H 2650 1400 50  0001 L BNN "Field5"
 F 6 "None" H 2650 1400 50  0001 L BNN "Field6"
@@ -1336,7 +1335,7 @@ P 10750 1450
 F 0 "U2" H 10750 1000 50  0000 C CNN
 F 1 "LM324" H 10750 1100 50  0000 C CNN
 F 2 "LM324:SOIC127P600X175-14N" H 10750 1450 50  0001 L BNN
-F 3 "these devices consist of four independent high-gain frequency-compensated operational amplifiers that are designed sp..." H 10750 1450 50  0001 L BNN
+F 3 "" H 10750 1450 50  0001 L BNN
 F 4 "Texas Instruments" H 10750 1450 50  0001 L BNN "Field4"
 F 5 "Unavailable" H 10750 1450 50  0001 L BNN "Field5"
 F 6 "None" H 10750 1450 50  0001 L BNN "Field6"
@@ -1368,7 +1367,7 @@ P 12600 4300
 F 0 "U2" H 12600 3850 50  0000 C CNN
 F 1 "LM324" H 12600 3950 50  0000 C CNN
 F 2 "LM324:SOIC127P600X175-14N" H 12600 4300 50  0001 L BNN
-F 3 "these devices consist of four independent high-gain frequency-compensated operational amplifiers that are designed sp..." H 12600 4300 50  0001 L BNN
+F 3 "" H 12600 4300 50  0001 L BNN
 F 4 "Texas Instruments" H 12600 4300 50  0001 L BNN "Field4"
 F 5 "Unavailable" H 12600 4300 50  0001 L BNN "Field5"
 F 6 "None" H 12600 4300 50  0001 L BNN "Field6"
@@ -1377,8 +1376,6 @@ F 8 "SOIC-14 Texas Instruments" H 12600 4300 50  0001 L BNN "Field8"
 	4    12600 4300
 	-1   0    0    1   
 $EndComp
-Connection ~ 12300 4300
-Connection ~ 12900 4400
 $Comp
 L LM324:LM324 U1
 U 1 1 5DFC22FC
@@ -1411,12 +1408,6 @@ F 8 "SOIC-14 Texas Instruments" H 4850 4400 50  0001 L BNN "Field8"
 	2    4850 4400
 	-1   0    0    1   
 $EndComp
-Connection ~ 4550 4400
-Connection ~ 5150 4500
-Connection ~ 8150 4200
-Connection ~ 8750 4300
-Connection ~ 10450 1450
-Connection ~ 11050 1550
 $Comp
 L LM324:LM324 U1
 U 4 1 5E208FFB
@@ -1433,8 +1424,6 @@ F 8 "SOIC-14 Texas Instruments" H 6600 1450 50  0001 L BNN "Field8"
 	4    6600 1450
 	-1   0    0    1   
 $EndComp
-Connection ~ 6300 1450
-Connection ~ 6900 1550
 $Comp
 L power:VCC #PWR06
 U 1 1 5E2C37E5
@@ -1487,7 +1476,6 @@ Wire Wire Line
 	1550 4100 1350 4100
 Wire Wire Line
 	1350 4700 1550 4700
-Connection ~ 1850 4500
 Wire Wire Line
 	1850 4050 1150 4050
 Wire Wire Line
@@ -1497,8 +1485,6 @@ Wire Wire Line
 Connection ~ 1150 4400
 Wire Wire Line
 	1150 4400 1250 4400
-Connection ~ 2350 1400
-Connection ~ 2950 1500
 Wire Wire Line
 	2350 1050 2950 1050
 Wire Wire Line
@@ -2038,7 +2024,7 @@ GND
 Text Label 7650 9250 2    50   ~ 0
 TONE
 $Comp
-L teensy:Teensy3.6 U8
+L new_synth_transistor-rescue:Teensy3.6-teensy U8
 U 1 1 5DDD7864
 P 11350 8500
 F 0 "U8" H 11350 11043 60  0000 C CNN
@@ -2048,4 +2034,23 @@ F 3 "" H 11350 8550 60  0000 C CNN
 	1    11350 8500
 	1    0    0    -1  
 $EndComp
+$Comp
+L LM324:LM324 U2
+U 3 1 5DE30E7F
+P 21600 5200
+F 0 "U2" H 21600 5570 50  0000 C CNN
+F 1 "LM324" H 21600 5479 50  0000 C CNN
+F 2 "LM324:SOIC127P600X175-14N" H 21600 5200 50  0001 L BNN
+F 3 "" H 21600 5200 50  0001 L BNN
+F 4 "Texas Instruments" H 21600 5200 50  0001 L BNN "Field4"
+F 5 "Unavailable" H 21600 5200 50  0001 L BNN "Field5"
+F 6 "None" H 21600 5200 50  0001 L BNN "Field6"
+F 7 "LM324" H 21600 5200 50  0001 L BNN "Field7"
+F 8 "SOIC-14 Texas Instruments" H 21600 5200 50  0001 L BNN "Field8"
+	3    21600 5200
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 21300 5200
+NoConn ~ 21900 5100
+NoConn ~ 21900 5300
 $EndSCHEMATC
