@@ -1712,17 +1712,6 @@ Wire Wire Line
 Wire Wire Line
 	16300 2600 16650 2600
 $Comp
-L teensy:Teensy3.6 U?
-U 1 1 5DDCBF53
-P 11350 8500
-F 0 "U?" H 11350 11043 60  0000 C CNN
-F 1 "Teensy3.6" H 11350 10937 60  0000 C CNN
-F 2 "teensy:Teensy35_36" H 11350 10831 60  0000 C CNN
-F 3 "" H 11350 8550 60  0000 C CNN
-	1    11350 8500
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5DDEB10D
 P 9800 6350
@@ -2048,4 +2037,15 @@ Text Label 7650 9150 2    50   ~ 0
 GND
 Text Label 7650 9250 2    50   ~ 0
 TONE
+$Comp
+L teensy:Teensy3.6 U?
+U 1 1 5DDD7864
+P 11350 8500
+F 0 "U?" H 11350 11043 60  0000 C CNN
+F 1 "Teensy3.6" H 11350 10937 60  0000 C CNN
+F 2 "teensy:Teensy35_36" H 11350 10831 60  0000 C CNN
+F 3 "" H 11350 8550 60  0000 C CNN
+	1    11350 8500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
