@@ -17,13 +17,13 @@ $EndDescr
 $Comp
 L Device:D_Photo D1
 U 1 1 5DC9C9B2
-P 2400 1900
-F 0 "D1" H 2350 2195 50  0000 C CNN
-F 1 "D_Photo" H 2350 2104 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2350 1900 50  0001 C CNN
-F 3 "~" H 2350 1900 50  0001 C CNN
-	1    2400 1900
-	1    0    0    -1  
+P 2300 1900
+F 0 "D1" H 2250 1700 50  0000 C CNN
+F 1 "D_Photo" H 2250 1800 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2250 1900 50  0001 C CNN
+F 3 "~" H 2250 1900 50  0001 C CNN
+	1    2300 1900
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R1
@@ -63,15 +63,12 @@ $EndComp
 Wire Wire Line
 	3100 1900 2900 1900
 Wire Wire Line
-	2200 1900 2000 1900
-Wire Wire Line
 	3100 1900 3100 1950
 Wire Wire Line
 	2500 2100 2600 2100
 Wire Wire Line
 	2500 1900 2500 2100
-Connection ~ 2500 1900
-Text Label 2600 2100 0    50   ~ 0
+Text Label 2800 2400 0    50   ~ 0
 A0
 $Comp
 L Connector:Conn_01x03_Male J1
@@ -152,4 +149,45 @@ F 3 "" H 1350 2950 50  0001 C CNN
 	1    1350 2950
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2000 1900 2200 1900
+Connection ~ 2500 1900
+$Comp
+L Device:R R2
+U 1 1 5DDEA59D
+P 2600 2250
+F 0 "R2" H 2670 2296 50  0000 L CNN
+F 1 "R" H 2670 2205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2530 2250 50  0001 C CNN
+F 3 "~" H 2600 2250 50  0001 C CNN
+	1    2600 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5DDEA697
+P 2600 2600
+F 0 "R3" H 2670 2646 50  0000 L CNN
+F 1 "R" H 2670 2555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2530 2600 50  0001 C CNN
+F 3 "~" H 2600 2600 50  0001 C CNN
+	1    2600 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5DDEA749
+P 2600 2750
+F 0 "#PWR0101" H 2600 2500 50  0001 C CNN
+F 1 "GND" H 2605 2577 50  0000 C CNN
+F 2 "" H 2600 2750 50  0001 C CNN
+F 3 "" H 2600 2750 50  0001 C CNN
+	1    2600 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 2450 2600 2400
+Wire Wire Line
+	2600 2400 2800 2400
+Connection ~ 2600 2400
 $EndSCHEMATC
