@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.0.1-33cea8e~68~ubuntu18.04.1)
+(kicad_pcb (version 20171130) (host pcbnew "(5.0.1)-4")
 
   (general
     (thickness 1.6)
@@ -89,7 +89,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "REV 2 GERBER/"))
+      (outputdirectory "REV 2/"))
   )
 
   (net 0 "")
@@ -3545,7 +3545,7 @@
   (segment (start 263.372889 41.636852) (end 264.571529 40.438212) (width 0.1524) (layer F.Cu) (net 105) (tstamp 5DDF1CDF))
   (segment (start 262.773209 41.636852) (end 263.372889 41.636852) (width 0.1524) (layer F.Cu) (net 105) (tstamp 5DDF1CF1))
 
-  (zone (net 4) (net_name GND) (layer B.Cu) (tstamp 5DDF3207) (hatch edge 0.508)
+  (zone (net 4) (net_name GND) (layer B.Cu) (tstamp 5DE08672) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
