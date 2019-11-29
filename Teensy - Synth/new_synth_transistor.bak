@@ -1137,7 +1137,7 @@ Wire Wire Line
 Wire Wire Line
 	2750 5250 2750 5100
 Text Label 2200 1400 2    50   ~ 0
-T5
+T6
 Text Label 1100 4400 2    50   ~ 0
 T4
 Text Label 4500 4400 2    50   ~ 0
@@ -1149,11 +1149,11 @@ T2
 Wire Wire Line
 	8100 4200 8150 4200
 Text Label 12250 4300 2    50   ~ 0
-T6
+T7
 Wire Wire Line
 	12250 4300 12300 4300
 Text Label 10400 1450 2    50   ~ 0
-T4
+T5
 Wire Wire Line
 	10400 1450 10450 1450
 Text Label 6250 1450 2    50   ~ 0
