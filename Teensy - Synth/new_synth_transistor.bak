@@ -163,7 +163,7 @@ Wire Wire Line
 Wire Wire Line
 	18900 2200 18900 2350
 $Comp
-L LM324:LM324 U12
+L new_synth_transistor-rescue:LM324-LM324 U12
 U 1 1 5DC5D391
 P 21800 3600
 F 0 "U12" H 21950 3950 50  0000 L CNN
@@ -179,7 +179,7 @@ F 8 "SOIC-14 Texas Instruments" H 21800 3600 50  0001 L BNN "Field8"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LM324:LM324 U12
+L new_synth_transistor-rescue:LM324-LM324 U12
 U 2 1 5DC68A05
 P 21850 2600
 F 0 "U12" H 22300 2650 50  0000 C CNN
@@ -195,7 +195,7 @@ F 8 "SOIC-14 Texas Instruments" H 21850 2600 50  0001 L BNN "Field8"
 	1    0    0    1   
 $EndComp
 $Comp
-L LM324:LM324 U12
+L new_synth_transistor-rescue:LM324-LM324 U12
 U 3 1 5DC68B40
 P 19500 4900
 F 0 "U12" H 19500 5270 50  0000 C CNN
@@ -1313,7 +1313,7 @@ Wire Wire Line
 	20150 4000 19900 4000
 Connection ~ 20150 4000
 $Comp
-L LM324:LM324 U2
+L new_synth_transistor-rescue:LM324-LM324 U2
 U 2 1 5DEEF88A
 P 10750 1450
 F 0 "U2" H 10750 1000 50  0000 C CNN
@@ -1329,7 +1329,7 @@ F 8 "SOIC-14 Texas Instruments" H 10750 1450 50  0001 L BNN "Field8"
 	-1   0    0    1   
 $EndComp
 $Comp
-L LM324:LM324 U1
+L new_synth_transistor-rescue:LM324-LM324 U1
 U 3 1 5DEEF97F
 P 8450 4200
 F 0 "U1" H 8450 3750 50  0000 C CNN
@@ -1345,7 +1345,7 @@ F 8 "SOIC-14 Texas Instruments" H 8450 4200 50  0001 L BNN "Field8"
 	-1   0    0    1   
 $EndComp
 $Comp
-L LM324:LM324 U2
+L new_synth_transistor-rescue:LM324-LM324 U2
 U 4 1 5DEF0107
 P 12600 4300
 F 0 "U2" H 12600 3850 50  0000 C CNN
@@ -1361,7 +1361,7 @@ F 8 "SOIC-14 Texas Instruments" H 12600 4300 50  0001 L BNN "Field8"
 	-1   0    0    1   
 $EndComp
 $Comp
-L LM324:LM324 U1
+L new_synth_transistor-rescue:LM324-LM324 U1
 U 1 1 5DFC22FC
 P 1550 4400
 F 0 "U1" H 1550 3850 50  0000 C CNN
@@ -1377,7 +1377,7 @@ F 8 "SOIC-14 Texas Instruments" H 1550 4400 50  0001 L BNN "Field8"
 	-1   0    0    1   
 $EndComp
 $Comp
-L LM324:LM324 U1
+L new_synth_transistor-rescue:LM324-LM324 U1
 U 2 1 5DFC2465
 P 4850 4400
 F 0 "U1" H 4850 3950 50  0000 C CNN
@@ -1393,7 +1393,7 @@ F 8 "SOIC-14 Texas Instruments" H 4850 4400 50  0001 L BNN "Field8"
 	-1   0    0    1   
 $EndComp
 $Comp
-L LM324:LM324 U1
+L new_synth_transistor-rescue:LM324-LM324 U1
 U 4 1 5E208FFB
 P 6600 1450
 F 0 "U1" H 6600 1000 50  0000 C CNN
@@ -1706,12 +1706,12 @@ $EndComp
 $Comp
 L power:GND #PWR028
 U 1 1 5DE16CCF
-P 9750 10150
-F 0 "#PWR028" H 9750 9900 50  0001 C CNN
-F 1 "GND" H 9755 9977 50  0000 C CNN
-F 2 "" H 9750 10150 50  0001 C CNN
-F 3 "" H 9750 10150 50  0001 C CNN
-	1    9750 10150
+P 9650 10150
+F 0 "#PWR028" H 9650 9900 50  0001 C CNN
+F 1 "GND" H 9655 9977 50  0000 C CNN
+F 2 "" H 9650 10150 50  0001 C CNN
+F 3 "" H 9650 10150 50  0001 C CNN
+	1    9650 10150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1720,8 +1720,6 @@ Wire Wire Line
 	9750 8950 9750 9000
 Wire Wire Line
 	10200 6350 9800 6350
-Wire Wire Line
-	10200 10150 9750 10150
 Connection ~ 17650 2350
 $Comp
 L SN7402HC02NSR:SN74HC02NSR U11
@@ -2022,7 +2020,7 @@ NoConn ~ 2350 2950
 NoConn ~ 2950 2850
 NoConn ~ 2950 3050
 $Comp
-L LM324:LM324 U2
+L new_synth_transistor-rescue:LM324-LM324 U2
 U 1 1 5DEEF739
 P 2650 1400
 F 0 "U2" H 2650 850 50  0000 C CNN
@@ -2038,7 +2036,7 @@ F 8 "SOIC-14 Texas Instruments" H 2650 1400 50  0001 L BNN "Field8"
 	-1   0    0    1   
 $EndComp
 $Comp
-L LM324:LM324 U2
+L new_synth_transistor-rescue:LM324-LM324 U2
 U 3 1 5DE30E7F
 P 2650 2950
 F 0 "U2" H 2650 3320 50  0000 C CNN
@@ -2053,4 +2051,10 @@ F 8 "SOIC-14 Texas Instruments" H 2650 2950 50  0001 L BNN "Field8"
 	3    2650 2950
 	-1   0    0    -1  
 $EndComp
+Text Label 10200 10350 2    50   ~ 0
+ADSR_OUT
+Wire Wire Line
+	9650 10150 10200 10150
+Text Label 10200 9950 2    50   ~ 0
+SIGNAL
 $EndSCHEMATC
