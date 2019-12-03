@@ -27,24 +27,25 @@ Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet
 26,Resistor,R,RB7,578,R_0805_2012Metric,1,~,,,,,
 27,Resistor,R,RB1,6.619k,R_0805_2012Metric,1,~,,,,,
 28,Resistor,R,RB6,7.844k,R_0805_2012Metric,1,~,,,,,
-29,,LM324-LM324,U1 U2 U17,LM324,SOIC127P600X175-14N,3,these devices consist of four independent high-gain frequency-compensated operational amplifiers that are designed sp...,SOIC-14 Texas Instruments,Texas Instruments,LM324,None,Unavailable
+29,,LM324,U1 U2 U17,LM324,SOIC127P600X175-14N,3,these devices consist of four independent high-gain frequency-compensated operational amplifiers that are designed sp...,SOIC-14 Texas Instruments,Texas Instruments,LM324,None,Unavailable
 30,"Timer, DIP-8/SOIC-8/SSOP-8",LM555,U3 U5 U7 U9 U11 U13 U16,LM555,SO08,7,http://www.ti.com/lit/ds/symlink/lm555.pdf,,,,,
 31,,NCP1117DT33T5G,U4,NCP1117DT33T5G,NCP1117DT33T5G,1,,,,,,
 32,,SN74HC02NSR,U6,SN74HC02NSR,SN74HC02NSR,1,,,,,,
 33,"ARM Cortex-M0 MCU, 128KB flash, 16KB RAM, 48MHz, 2-3.6V, 51 GPIO, LQFP-64",STM32F072RBTx,U14,STM32F072RBTx,LQFP-64_10x10mm_P0.5mm,1,http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00090510.pdf,,,,,
 34,"Four pin crystal, GND on pins 2 and 4",Crystal_GND24,Y1,Crystal_32MHz,OSCCC200X160X50N,1,~,,,,,
-
-
-
-
-
-Component Groups:,34
-Component Count:,88
-Fitted Components:,88
-Number of PCBs:,1
-Total components:,88
-Schematic Version:,
-Schematic Date:,
-BoM Date:,Tue 03 Dec 2019 10:00:13 AM EST
-Schematic Source:,/home/dpatel1/Documents/Academics/Major-Lazers/Synth - Final/new_synth_transistor.sch
-KiCad Version:,Eeschema 5.0.1-33cea8e~68~ubuntu18.04.1
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+Component Groups:,34,,,,,,,,,,,
+Component Count:,88,,,,,,,,,,,
+Fitted Components:,88,,,,,,,,,,,
+Number of PCBs:,1,,,,,,,,,,,
+Total components:,88,,,,,,,,,,,
+Schematic Version:,,,,,,,,,,,,
+Schematic Date:,,,,,,,,,,,,
+PCB Variant:,default,,,,,,,,,,,
+BoM Date:,11/12/2019 10:54:52 AM,,,,,,,,,,,
+Schematic Source:,C:\Users\tjagielski\Documents\Projects\School\Sophomore - Semester 1\POE\Final Project\Major-Lazers\Synth - Final\new_synth_transistor.sch,,,,,,,,,,,
+KiCad Version:,Eeschema (5.0.1)-4,,,,,,,,,,,

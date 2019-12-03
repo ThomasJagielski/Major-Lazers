@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\Users\tjagielski\Documents\Projects\School\Sophomore - Semester 1\POE\Final Project\Major-Lazers\Synth - Final\new_synth_transistor.sch</source>
-    <date>11/12/2019 10:54:52 AM</date>
-    <tool>Eeschema (5.0.1)-4</tool>
+    <source>/home/dpatel1/Documents/Academics/Major-Lazers/Synth - Final/new_synth_transistor.sch</source>
+    <date>Tue 03 Dec 2019 10:00:13 AM EST</date>
+    <tool>Eeschema 5.0.1-33cea8e~68~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -77,7 +77,7 @@
         <field name="Field7">LM324</field>
         <field name="Field8">SOIC-14 Texas Instruments</field>
       </fields>
-      <libsource lib="LM324" part="LM324" description=""/>
+      <libsource lib="new_synth_transistor-rescue" part="LM324-LM324" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DC5D391</tstamp>
     </comp>
@@ -672,7 +672,7 @@
         <field name="Field7">LM324</field>
         <field name="Field8">SOIC-14 Texas Instruments</field>
       </fields>
-      <libsource lib="LM324" part="LM324" description=""/>
+      <libsource lib="new_synth_transistor-rescue" part="LM324-LM324" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DEEF739</tstamp>
     </comp>
@@ -687,7 +687,7 @@
         <field name="Field7">LM324</field>
         <field name="Field8">SOIC-14 Texas Instruments</field>
       </fields>
-      <libsource lib="LM324" part="LM324" description=""/>
+      <libsource lib="new_synth_transistor-rescue" part="LM324-LM324" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5DEEF97F</tstamp>
     </comp>
@@ -898,35 +898,6 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="LM324" part="LM324">
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">LM324</field>
-        <field name="Footprint">SOIC127P600X175-14N</field>
-        <field name="Datasheet">these devices consist of four independent high-gain frequency-compensated operational amplifiers that are designed sp...</field>
-        <field name="Field4">Texas Instruments</field>
-        <field name="Field5">Unavailable</field>
-        <field name="Field6">None</field>
-        <field name="Field7">LM324</field>
-        <field name="Field8">SOIC-14 Texas Instruments</field>
-      </fields>
-      <pins>
-        <pin num="1" name="OUTPUT1" type="output"/>
-        <pin num="2" name="INVERTING_INPUT1" type="input"/>
-        <pin num="3" name="NON-INVERTING_INPUT1" type="input"/>
-        <pin num="4" name="VCC+" type="power_in"/>
-        <pin num="5" name="NON-INVERTING_INPUT2" type="input"/>
-        <pin num="6" name="INVERTING_INPUT2" type="input"/>
-        <pin num="7" name="OUTPUT2" type="output"/>
-        <pin num="8" name="OUTPUT3" type="output"/>
-        <pin num="9" name="INVERTING_INPUT3" type="input"/>
-        <pin num="10" name="NON-INVERTING_INPUT3" type="input"/>
-        <pin num="11" name="VCC-" type="power_in"/>
-        <pin num="12" name="NON-INVERTING_INPUT4" type="input"/>
-        <pin num="13" name="INVERTING_INPUT4" type="input"/>
-        <pin num="14" name="OUTPUT4" type="output"/>
-      </pins>
-    </libpart>
     <libpart lib="MCU_ST_STM32F0" part="STM32F072R8Tx">
       <aliases>
         <alias>STM32F072RBTx</alias>
@@ -1117,34 +1088,63 @@
         <pin num="3" name="C" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="new_synth_transistor-rescue" part="LM324-LM324">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM324-LM324</field>
+        <field name="Footprint">SOIC127P600X175-14N</field>
+        <field name="Datasheet">these devices consist of four independent high-gain frequency-compensated operational amplifiers that are designed sp...</field>
+        <field name="Field4">Texas Instruments</field>
+        <field name="Field5">Unavailable</field>
+        <field name="Field6">None</field>
+        <field name="Field7">LM324</field>
+        <field name="Field8">SOIC-14 Texas Instruments</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OUTPUT1" type="output"/>
+        <pin num="2" name="INVERTING_INPUT1" type="input"/>
+        <pin num="3" name="NON-INVERTING_INPUT1" type="input"/>
+        <pin num="4" name="VCC+" type="power_in"/>
+        <pin num="5" name="NON-INVERTING_INPUT2" type="input"/>
+        <pin num="6" name="INVERTING_INPUT2" type="input"/>
+        <pin num="7" name="OUTPUT2" type="output"/>
+        <pin num="8" name="OUTPUT3" type="output"/>
+        <pin num="9" name="INVERTING_INPUT3" type="input"/>
+        <pin num="10" name="NON-INVERTING_INPUT3" type="input"/>
+        <pin num="11" name="VCC-" type="power_in"/>
+        <pin num="12" name="NON-INVERTING_INPUT4" type="input"/>
+        <pin num="13" name="INVERTING_INPUT4" type="input"/>
+        <pin num="14" name="OUTPUT4" type="output"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
     <library logical="BAT60JFILM">
-      <uri>C:\Users\tjagielski\Documents\Projects\School\Sophomore - Semester 1\POE\Final Project\Major-Lazers\Synth - Final/ul_BAT60JFILM/KiCAD/2019-11-06_17-02-00/BAT60JFILM.lib</uri>
+      <uri>/home/dpatel1/Documents/Academics/Major-Lazers/Synth - Final/ul_BAT60JFILM/KiCAD/2019-11-06_17-02-00/BAT60JFILM.lib</uri>
     </library>
     <library logical="Connector">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+      <uri>/usr/share/kicad/library/Connector.lib</uri>
     </library>
     <library logical="Device">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
-    </library>
-    <library logical="LM324">
-      <uri>C:/Users/tjagielski/Documents/Projects/School/Sophomore - Semester 1/POE/Final Project/Major-Lazers/synthesizer/LM324/LM324.lib</uri>
+      <uri>/usr/share/kicad/library/Device.lib</uri>
     </library>
     <library logical="MCU_ST_STM32F0">
-      <uri>C:\Program Files\KiCad\share\kicad\library/MCU_ST_STM32F0.lib</uri>
+      <uri>/usr/share/kicad/library/MCU_ST_STM32F0.lib</uri>
     </library>
     <library logical="NCP1117DT33T5G">
-      <uri>C:\Users\tjagielski\Documents\Projects\School\Sophomore - Semester 1\POE\Final Project\Major-Lazers\Synth - Final/ul_NCP1117DT33T5G/KiCAD/2019-11-05_18-49-15/NCP1117DT33T5G.lib</uri>
+      <uri>/home/dpatel1/Documents/Academics/Major-Lazers/Synth - Final/ul_NCP1117DT33T5G/KiCAD/2019-11-05_18-49-15/NCP1117DT33T5G.lib</uri>
     </library>
     <library logical="SN7402HC02NSR">
-      <uri>C:\Users\tjagielski\Documents\Projects\School\Sophomore - Semester 1\POE\Final Project\Major-Lazers\Synth - Final/ul_SN74HC02NSR/KiCAD/2019-11-09_14-53-27/2019-11-09_14-53-27.lib</uri>
+      <uri>/home/dpatel1/Documents/Academics/Major-Lazers/Synth - Final/ul_SN74HC02NSR/KiCAD/2019-11-09_14-53-27/2019-11-09_14-53-27.lib</uri>
     </library>
     <library logical="Timer">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Timer.lib</uri>
+      <uri>/usr/share/kicad/library/Timer.lib</uri>
     </library>
     <library logical="Transistor_BJT">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Transistor_BJT.lib</uri>
+      <uri>/usr/share/kicad/library/Transistor_BJT.lib</uri>
+    </library>
+    <library logical="new_synth_transistor-rescue">
+      <uri>/home/dpatel1/Documents/Academics/Major-Lazers/Synth - Final/new_synth_transistor-rescue.lib</uri>
     </library>
   </libraries>
   <nets>
