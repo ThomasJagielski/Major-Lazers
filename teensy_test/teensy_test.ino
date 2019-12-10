@@ -13,8 +13,13 @@ const int dio4_pin = A17;
 const int dio5_pin = A18;
 const int dio6_pin = A19;
 const int dio7_pin = A20;
+int sum = 0;
+int old_sum = 0;
+unsigned long previousMillis = 0; // initialize the previousMillis to 0
 
 const int adsr_pin = A2;
+const int adsr_pulse = A0;
+int adsr_signal_sent = 0;
 
 const int signal_pin = A22;
 int osc1,osc2,osc3,osc4,osc5,osc6,osc7;
@@ -36,7 +41,8 @@ void setup() {
   pinMode(dio4_pin,INPUT);
   pinMode(dio5_pin,INPUT);
   pinMode(dio6_pin,INPUT);
-  
+
+  pinMode(adsr_pulse,OUTPUT);
   pinMode(adsr_pin,INPUT);
   pinMode(signal_pin,OUTPUT);
   Serial.begin(9600);
@@ -96,20 +102,36 @@ void loop() {
   }
   dio7 = analogRead(dio7_pin);
   // if (dio7 < 300) dio7 = 0;
-
-
-
-  
   if (dio7 > 300){
     g = 1;
     }
   else {
     g = 0;
   }
+
+  //sum = a+b+c+d+e+f+g;
+  sum = a;
+
+  float currentMillis = millis();
+  if (sum > old_sum){
+    analogWrite(adsr_pulse,1023);
+    adsr_signal_sent = 1;
+    previousMillis = currentMillis;
+    old_sum = sum;
+    }
+
+  if (currentMillis - previousMillis >= 1000 && adsr_signal_sent == 1) {
+    previousMillis = currentMillis; // reset the previousMillis time to the current time
+    analogWrite(adsr_pulse,0);
+    adsr_signal_sent = 0;
+    }
+
     
-//  adsr = analogRead(adsr_pin);
-  output_signal = ((((osc2 * a) + (osc5 * b) + (osc7 * c)) / (a+b+c))-300)*0.4;
-  
+  adsr = analogRead(adsr_pin);
+  //output_signal = ((((osc2 * a) + (osc5 * b) + (osc7 * c)) / (a+b+c))-300)*0.4;
+  //output_signal = (osc2 * b)*0.4-800;
+  output_signal = (((osc2 * b)*0.4- 300)*(adsr));
   //output_signal = (((((osc1 * a) + (osc2 * b) + (osc3 * c) + (osc4 * d) + (osc5 * e) + (osc6 * f) + (osc7 * g))/(a+b+c+d+e+f+g)) * (0.00055 * adsr)) *  0.2) - 300;
+  
   analogWrite(signal_pin, output_signal);
 }
