@@ -109,28 +109,35 @@ void loop() {
     g = 0;
   }
 
-  //sum = a+b+c+d+e+f+g;
-  sum = a;
+  sum = b+c+e+f+g;
 
   float currentMillis = millis();
-  if (sum > old_sum){
-    analogWrite(adsr_pulse,1023);
+  if (sum>old_sum && adsr_signal_sent == 0){
+    analogWrite(adsr_pulse,HIGH);
     adsr_signal_sent = 1;
     previousMillis = currentMillis;
     old_sum = sum;
     }
 
-  if (currentMillis - previousMillis >= 1000 && adsr_signal_sent == 1) {
-    previousMillis = currentMillis; // reset the previousMillis time to the current time
-    analogWrite(adsr_pulse,0);
+  if (currentMillis - previousMillis >= 10000 && adsr_signal_sent == 1) {
+    //previousMillis = currentMillis; // reset the previousMillis time to the current time
+    analogWrite(adsr_pulse,LOW);
     adsr_signal_sent = 0;
     }
-
-    
+ 
   adsr = analogRead(adsr_pin);
+  output_signal = (((((osc2 * b) + (osc3 * c) + (osc5 * e) + (osc6 * f) + (osc7 * g)) / sum * 0.6)) - 300);
+  
+  //output_signal = (osc5 * e)*0.6-500;  
   //output_signal = ((((osc2 * a) + (osc5 * b) + (osc7 * c)) / (a+b+c))-300)*0.4;
-  //output_signal = (osc2 * b)*0.4-800;
-  output_signal = (((osc2 * b)*0.4- 300)*(adsr));
+  //output_signal = (osc2 * b)*0.6-500;
+  //lower bound: output_signal = (((osc2 * b)*0.4- 600)*(0.00055 * adsr));
+  //if (sum != 0){
+  //  output_signal = ((adsr * (((osc2 * b * 0.4) + (osc3 * c * 0.4) + (osc5 * e * 0.4) + (osc6 * f * 0.4) + (osc7 * g * 0.4)) / 5) * 0.4)) - 100;
+  //  }
+  //if (sum == 0){
+  //  output_signal = 0;
+  //  }
   //output_signal = (((((osc1 * a) + (osc2 * b) + (osc3 * c) + (osc4 * d) + (osc5 * e) + (osc6 * f) + (osc7 * g))/(a+b+c+d+e+f+g)) * (0.00055 * adsr)) *  0.2) - 300;
   
   analogWrite(signal_pin, output_signal);
