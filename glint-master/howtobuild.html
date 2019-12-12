@@ -85,7 +85,7 @@
 
     <!-- home
     ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="poe_images/pcb.png" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="poe_images/final/oop-6.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -93,7 +93,7 @@
         <div class="home-content">
 
             <div class="row home-content__main">
-                <h1>SOFTWARE SUBSYSTEM.</h1>
+                <h1>HOW TO BUILD BEAM BARS</h1>
 
             </div>
 
@@ -101,62 +101,18 @@
         </div> <!-- end home-content -->
     </section> <!-- end s-home -->
 
+
     <!-- category 1 (ex. adsr, 555, etc.)
     ================================================== -->
     <section id='services' class="s-services">
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-2">Diode Flag System</h1>
+                <h1 class="display-2">Laser Diode</h1>
             </div>
+            <p><img src="poe_images/timeline.PNG"
+                sizes="(max-width: 1000px) 100vw, 1000px" alt="Timeline of Integration"></p>
         </div> <!-- end section-header -->
-
-        <div class="row" data-aos="fade-up">
-            <div class="col-six tab-full">
-                <h3> Description and Rationale</h3>
-                <p>The diode signals are read by the Teensy.  We utilize a threshold to determine if the diode has a laser present on the diode or not.  When the laser is present on the diode, we set a flag equal to 0 (if not detected) or 1 (if detected) and multiply it against the oscillating signal.  Another way to think of the flag is as an include/exclude term for the signals that should be included in the output.  By doing this, we can consistently power the 555 timers.  This reduces the number of pins we use and simplifies the code.</p>
-            </div>
-
-            <div class="col-six tab-full">
-
-                <h3> Image Title</h3>
-                <p><img src="images/wheel-500.jpg"
-                    srcset="images/wheel-1000.jpg 1000w,
-                    images/wheel-500.jpg 500w"
-                    sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
-
-            </div>
-        </div> <!-- end desc -->
-    </section> <!-- end section -->
-
-
-        <!-- category 2 (ex. adsr, 555, etc.)
-    ================================================== -->
-    <section id='services' class="s-services">
-
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h1 class="display-2">Scaling the Audio Signal</h1>
-            </div>
-        </div> <!-- end section-header -->
-
-        <div class="row" data-aos="fade-up">
-            <div class="col-six tab-full">
-                <h3> How did we scale the signal?
-                </h3>
-                <p>As we are combining waves, the sum of the output wave can achieve a level higher than the Teesny can output.  Due to this, the wave will be clipped and not sound as we expect.  In order to alleviate this issue, we scaled the output audio signal.  To do this, we normalized it by dividing by the sum of the Diode flags, multiplied by a scale factor of 0.6, and further reduced by subtracting ~1.5 V from the signal.  All of these modifications ensure the output signal can both be heard and is within the bounds.</p>
-            </div>
-
-            <div class="col-six tab-full">
-
-                <h3> Image Title</h3>
-                <p><img src="images/wheel-500.jpg"
-                    srcset="images/wheel-1000.jpg 1000w,
-                    images/wheel-500.jpg 500w"
-                    sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
-
-            </div>
-        </div> <!-- end desc -->
     </section> <!-- end section -->
 
 
