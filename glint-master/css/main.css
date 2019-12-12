@@ -1656,13 +1656,14 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     transition: all 0.5s ease-in-out;
 }
 
-.header-menu-toggle.opaque {
-    background-color: #000000;
+/*.header-menu-toggle.opaque {
+    background-color: white;
 }
 
 .header-menu-toggle.opaque .header-menu-text {
-    background-color: #000000;
+    background-color: white;
 }
+*/
 
 .header-menu-toggle:hover, .header-menu-toggle:focus {
     color: #FFFFFF;
@@ -1687,7 +1688,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     top: 50%;
     right: auto;
     bottom: auto;
-    background-color: white;
+    background-color: black;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
