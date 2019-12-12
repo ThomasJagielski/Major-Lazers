@@ -85,54 +85,44 @@
     </header> <!-- end s-header -->
 
 
-    <!-- header
+    <!-- home
     ================================================== -->
-    <section id='services' class="s-services">
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h1 class="display-1">THE PROCESS.</h1>
-                <h2>Sprint 1 <span class="mx-3">&bullet;</span> Sprint 2 <span class="mx-3">&bullet;</span> Sprint 3 <span class="mx-3">&bullet;</span> Final Sprint</h2>
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+                <h1>Process</h1>
+
             </div>
-        </div> <!-- end section-header -->
-
-        <div class="row narrow section-intro add-bottom text-center" data-aos="fade-up">
-          <p><img src="poe_images/system.png"></p> <!--- place holder system diagram -->
-        </div>
-    </section> <!-- end header -->
+        </div> <!-- end home-content -->
+    </section> <!-- end s-home -->
 
 
-    <!-- sprint 1
+    <!-- about
     ================================================== -->
     <section id='about' class="s-about">
       <div class="contact__line"></div>
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h2 class="display-2 display-2--light">Sprint 1</h2>
+                <h1 class="display-1 display-1--light">Sprint 1: October 29, 2019</h1>
             </div>
         </div> <!-- end section-header -->
 
-        <div class="row" data-aos="fade-up">
-            <div class="col-six tab-full">
-                <h3>
-                  During this sprint we were focused on developing a proof of concept of our systems.  Within this, we ensured we could detect a laser using the photodiode.  We found we needed to use some sort of filter on the diode to ensure we were isolating for the color wavelengths our laser was.  We used a red expo marker to cover the photodiode.  The second thing we worked on was outputting tones to a speaker through the Arduino.  We used Arduino’s tone function to do this.  Our final test for this sprint was integrating the photodiode with the speaker.  We successfully were able to play a tone through the speaker when the photodiode was detected.
-                </h3>
-                <h2>FEEDBACK:</h2>
-                <h3>
-                  We got a lot of input and advice about the software vs electrical audio. More than the majority of the survey takers said we needed to flesh out the software side of this project with mechanical system being our second priority.
-                </h3>
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <p class ='display-2--light'>
+                    During this sprint we were focused on developing a proof of concept of our systems.  Within this, we ensured we could detect a laser using the photodiode.  We found we needed to use some sort of filter on the diode to ensure we were isolating for the color wavelengths our laser was.  We used a red expo marker to cover the photodiode.  The second thing we worked on was outputting tones to a speaker through the Arduino.  We used Arduino’s tone function to do this.  Our final test for this sprint was integrating the photodiode with the speaker.  We successfully were able to play a tone through the speaker when the photodiode was detected.
+                </p>
+                <h3 class="display-3 display-2--light">Sprint Review Feedback:</h3>
+                <br>
+                <p class ='display-2--light'>
+                    We got a lot of input and advice about the software vs electrical audio. More than the majority of the survey takers said we needed to flesh out the software side of this project with mechanical system being our second priority.
+                </p>
             </div>
-
-            <div class="col-six tab-full">
-              <!--slides enbedded here-->
-                <p><img src="images/wheel-500.jpg"
-                    srcset="images/wheel-1000.jpg 1000w,
-                    images/wheel-500.jpg 500w"
-                    sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
-
-            </div>
-
-
         </div> <!-- end about-desc -->
     </section> <!-- end s-about -->
 
