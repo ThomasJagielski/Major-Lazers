@@ -107,22 +107,23 @@
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-2">Category 1</h1>
+                <h1 class="display-2">Laser Diode</h1>
             </div>
         </div> <!-- end section-header -->
 
         <div class="row" data-aos="fade-up">
             <div class="col-six tab-full">
-                <h3> blah
+                <h3> Description
                 </h3>
+                <p>In order to detect when the key is pressed, we use a photodiode to detect the exposed laser.  The photodiodes are on the top of the pipes.  The circuit we use is a voltage divider in which the photodiode is the first “resistor” in series.  In doing this, we can detect the voltage change when the laser is shining on the diode.</p>
+                <br>
+                <p>What we adjusted through testing: In order to make the photodiode focus on the light from the laser, we needed to add a light filter over the detector.  In practice, we colored over the photodiode with an expo marker.</p>
             </div>
 
             <div class="col-six tab-full">
 
-                <h3> Image Title</h3>
-                <p><img src="images/wheel-500.jpg"
-                    srcset="images/wheel-1000.jpg 1000w,
-                    images/wheel-500.jpg 500w"
+                <h3> Diode PCB </h3>
+                <p><img src="poe_images/final/photodiode.jpg"
                     sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
 
             </div>
@@ -135,22 +136,92 @@
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-2">Category 2</h1>
+                <h1 class="display-2">Sound Generation</h1>
             </div>
         </div> <!-- end section-header -->
 
         <div class="row" data-aos="fade-up">
             <div class="col-six tab-full">
-                <h3> blah
+                <h3> 555 Timers, ADSR, Teensy
                 </h3>
+                <p>Initially we planned on making a voltage controlled oscillator. However, due to complicated circuitry and lack of higher voltage supplies (16 and -16 V), we ended up using 555 timers.</p>
+                <br>
+                <p>We use 555 timers to generate the signals used as various tones. By changing the resistor values in surrounding circuitry, we can generate tones of different frequencies. The output signal from the 555 timer is a square wave, but the threshold signal is more sinusoidal in shape. The shape of the output signal changes the sound quality, and since we wanted a more natural sound, we chose to use the threshold signal. To avoid drawing too much current, we pass this threshold signal through an op-amp before passing it to the rest of the circuit.</p>
+                <br>
+                <p>We also made an analog ADSR (Attack, Delay, Sustain, Release) based on the circuit found in <a href="https://www.youtube.com/watch?v=jkv29Pf3VvM">this video</a>. This circuit effectively controls the charge of a capacitor in order to make a time variant signal. In combination with the oscillators, we generate a tone that is scaled by the ADSR signal.</p>
+                <br>
+                <p>We pass all of the oscillating signals, the ADSR signal, and the photodiode signals to the Teensy. Based on the photodiodes that are detected, we output an audio tone that is the sum of the oscillators and is scaled by the ADSR signal.</p>
+                <br>
+                <p>We used a Teensy 3.6 which is powered through the micro-usb.  This can be powered through a computer’s USB cable or a usb power bank.</p>
             </div>
 
             <div class="col-six tab-full">
 
-                <h3> Image Title</h3>
-                <p><img src="images/wheel-500.jpg"
-                    srcset="images/wheel-1000.jpg 1000w,
-                    images/wheel-500.jpg 500w"
+                <h3> Analog Synthesizer PCB</h3>
+                <p><img src="poe_images/final/pcbcentered.jpg"
+                    sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
+
+            </div>
+        </div> <!-- end desc -->
+    </section> <!-- end section -->
+
+    <section id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-2">555 Timer Oscillator Details</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-six tab-full">
+                <h3> Description
+                </h3>
+                <p>The notes we chose to use were the C major scale--C4 through B4. We chose the frequencies based on <a href="https://pages.mtu.edu/~suits/notefreqs.html">this page</a>, and calculated resistor values by using an equation from the 555 timer datasheet--Frequency = 1.44/(RA+RB)C. The schematic with locations for RA, RB, and C is shown below.</p>
+                </div>
+
+            <div class="col-six tab-full">
+
+                <h3> 555 Timer Schematic </h3>
+                <p><img src="poe_images/final/555schematic.PNG"
+                    sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
+
+            </div>
+        </div> <!-- end desc -->
+    </section> <!-- end section -->
+
+    <section id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-2">ADSR Circuit Details</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-six tab-full">
+                <h3> Description
+                </h3>
+                <h5>Modifications for Different Waveforms</h5>
+                <p>To define how long the attack is, we can modify R11.  To change the voltage it reaches, we can modify the output of the voltage divider at the negative input on U12B.  Similarly, the release and decay times can be modified by changing R12 and R13 respectively.  To modify the sustain level, you can modify the voltage divider on the positive terminal of U12C.</p>
+                <br>
+                <h5>How it Works</h5> 
+                <p>
+                    <ol>
+                        <li>A digital pulse is sent to the circuit</li>
+                        <li>Going through the attack resistor (R11), the capacitor (C8) is charged</li>
+                        <li>The charge of the capacitor is compared to a voltage set by R14 and R15.  When the voltage is high enough, a signal is sent from the op-amp back to the NOR gate.</li>
+                        <li>Q1, Q3, and Q4 are closed, which allows C8 to discharge through R13 and CR2 to U12C.  The capacitor is discharged into the op-amp.  We can change the output voltage of the op-amp by changing the values of R8 and R9 which are used to create a voltage divider.</li>
+                        <li>When the voltage of the capacitor discharges to the same voltage as the output of the voltage divider defined by R8 and R9, Q3 and Q4 are opened which closes Q2 allowing the capacitor to discharge into the NOR gate until 0 V.</li>
+                    </ol>
+                </p>
+
+            </div>
+
+            <div class="col-six tab-full">
+
+                <h3> 555 Timer Schematic </h3>
+                <p><img src="poe_images/final/ADSRschematic.PNG"
                     sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
 
             </div>
