@@ -44,7 +44,7 @@
 
       <div class="header-logo">
           <a class="site-logo" href="index.html">
-              <img src="poe_images/logo-white.png" alt="Homepage">
+              <img src="poe_images/logo-black.png" alt="Homepage">
           </a>
       </div>
 
@@ -86,80 +86,60 @@
   </header> <!-- end nav -->
 
 
-    <!-- home
-    ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="poe_images/software.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
-
-        <div class="overlay"></div>
-        <div class="shadow-overlay"></div>
-
-        <div class="home-content">
-
-            <div class="row home-content__main">
-                <h1>SOFTWARE SUBSYSTEM.</h1>
-            </div>
-
-
-        </div> <!-- end home-content -->
-    </section> <!-- end s-home -->
-
-    <!-- category 1 (ex. adsr, 555, etc.)
+    <!-- header
     ================================================== -->
     <section id='services' class="s-services">
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-2">Diode Flag System</h1>
+                <h1 class="display-1">SUBSYSTEMS.</h1>
+                <h3>Electrical <span class="mx-3">&bullet;</span> Mechanical <span class="mx-3">&bullet;</span> Software </h3>
             </div>
-        </div> <!-- end section-header -->
-
-        <div class="row" data-aos="fade-up">
-            <div class="col-six tab-full">
-                <h3> Description and Rationale</h3>
-                <p>The diode signals are read by the Teensy.  We utilize a threshold to determine if the diode has a laser present on the diode or not.  When the laser is present on the diode, we set a flag equal to 0 (if not detected) or 1 (if detected) and multiply it against the oscillating signal.  Another way to think of the flag is as an include/exclude term for the signals that should be included in the output.  By doing this, we can consistently power the 555 timers.  This reduces the number of pins we use and simplifies the code.</p>
-            </div>
-
-            <div class="col-six tab-full">
-
-                <p><img src="poe_images/photodiodes.jpg"
-                    srcset="poe_images/photodiodes.jpg 1000w,
-                    poe_images/photodiodes.jpg 500w"
-                    sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
-
-            </div>
-        </div> <!-- end desc -->
-    </section> <!-- end section -->
-
-
-        <!-- category 2 (ex. adsr, 555, etc.)
-    ================================================== -->
-    <section id='services' class="s-services">
+        </div>
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h1 class="display-2">Signal Post-Processing</h1>
-            </div>
-        </div> <!-- end section-header -->
+            <br>
+            <br>
+            <h2>Full System Block Diagram</h2>
+                <div class="col-full">
+                  <!--system diagram-->
+                  <div class="row narrow section-intro add-bottom text-center" data-aos="fade-up">
+                    <p><img src="poe_images/systemdiagram.png"></p>
+                  </div>
+
+                </div>
+        </div>
+
+        <div class="row section-header " data-aos="fade-up">>
+        <h2>Subsystem Pages</h2>
+        </div>
 
         <div class="row" data-aos="fade-up">
-            <div class="col-six tab-full">
-                <h3> How did we scale the signal?
-                </h3>
-                <p>As we are combining waves, the sum of the output wave can achieve a level higher than the Teesny can output.  Due to this, the wave will be clipped and not sound as we expect.  In order to alleviate this issue, we scaled the output audio signal.  To do this, we normalized it by dividing by the sum of the Diode flags, multiplied by a scale factor of 0.6, and further reduced by subtracting ~1.5 V from the signal.  All of these modifications ensure the output signal can both be heard and is within the bounds.</p>
-            </div>
+          <div class="col-three tab-full">
+            <a href="mechanical.html"><img width="1000" height="1000" src="poe_images/MECH.png"></a>
+          </div>
 
-            <div class="col-six tab-full">
+          <div class="col-three tab-full">
+            <a href="electrical.html"><img width="1000" height="1000" src="poe_images/MECH.png"></a>
+          </div>
 
-                <p><img src="poe_images/wave.png"
-                    srcset="poe_images/wave.png 1000w,
-                    poe_images/wave.png 500w"
-                    sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
+          <div class="col-three tab-full">
+            <a href="software.html"><img width="1000" height="1000" src="poe_images/MECH.png"></a>
+          </div>
 
-            </div>
-        </div> <!-- end desc -->
-    </section> <!-- end section -->
+          <div class="col-three tab-full">
+            <a href="howtobuild.html"><img width="1000" height="1000" src="poe_images/MECH.png"></a>
+          </div>
+        </div>
 
 
+    </section>
+
+    <!-- ME, EE, SS
+    ================================================== -->
+    <section id='works' class="s-services">
+
+    </section>
 
     <!-- preloader
     ================================================== -->
