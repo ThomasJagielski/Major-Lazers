@@ -86,15 +86,14 @@
   </header> <!-- end nav -->
 
 
-    <!-- home
+    <!-- heading
     ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="poe_images/pcb.png" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="poe_images/render2.gif"  data-position-y=right>
 
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
 
         <div class="home-content">
-
             <div class="row home-content__main">
                 <h1>MECHANICAL SUBSYSTEM.</h1>
 
@@ -104,59 +103,194 @@
         </div> <!-- end home-content -->
     </section> <!-- end s-home -->
 
-    <section id='services' class="s-services">
-
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h1 class="display-2">Mechanical System Block Diagram</h1>
-            </div>
-            <p><img src="poe_images/final/mechdiagram.png"
-                sizes="(max-width: 1000px) 100vw, 1000px" alt="Mechancial Block Diagram"></p>
-        </div> <!-- end section-header -->
-
-    </section> <!-- end section -->
-
-    <!-- category 1 (ex. adsr, 555, etc.)
+    <!-- system overview
     ================================================== -->
     <section id='services' class="s-services">
-
+        <!--system overview-->
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-2">Mechanical System Explained</h1>
+                <h1 class="display-2">SYSTEM OVERVIEW.</h1>
             </div>
         </div> <!-- end section-header -->
 
-        <div class="row" data-aos="fade-up">
+        <div class="row" data-aos="fade-up" margin="none">
             <div class="col-six tab-full">
-                <h3> Overall System Description
-                </h3>
-                <ul>
-                    <li>The system starts with the user input at the keys in the front of the box. These are 3D printed with silver filament and rest on a brass rod in the center of the key. The back half of the key lever is attached to a pulley system that is connected to a rotating cylinder that sits on a copper pipe in the center of the box. This copper pipe holds the lasers and allows these rotating cylinders to move about the lasers. When the key is pressed, it rotates the cylinder so that the laser shines through the cylinder. The laser is pointed straight down to a 45 degree mirror and is then redirected to another mirror at the back of the box, which is also at a 45 degree angle. The mirror in the back redirects the laser again to straight up clear tubing, to the top where the photodiode is mounted.</li>
-                    <li>When the user lets go of the key, there is a counterweight that causes the cylinder to block the laser in rest, and the key returns to its normal plane.</li>
-                    <li>There is a false bottom and false sides in the enclosure design in order to hide the electrical components. The false sides allow the wires for the lasers to reach the false bottom and the false bottom covers the circuits.</li>
-                    <li>The clear plastic pipes were used to emulate an organ, while the front was designed to emulate a keyboard.</li>
-                    <li>The enclosure was cut using the Shopbot, the pipes were cut with the horizontal bandsaw, the acrylic (including the acrylic mirror) was laser cut, and the silver looking components were 3D printed.</li>
-                    <li>The pulley system is made up of orange sewing thread, a steel pipe, and each end is tied to its respective 3D part.</li>
-                    <li>The false bottom was made up of clear acrylic, then spray painted on one side with black and metallic spray paint and rastered and laser cut on the other side</li>
-                    <li>The photodiode PCB mounts were mounted on the top of the clear pipes, attached to laser cut acrylic with slots to adjust the placement of the diode.We used M3 screws and nuts to fasten the PCB to the acrylic, as there were two holes in the PCB to do this.</li>
-                </ul>
+                <p><img src="poe_images/final/mechdiagram.png"
+                    sizes="(max-width: 1000px) 100vw, 100px" alt=""></p>
             </div>
-
             <div class="col-six tab-full">
-
-                <h3> Mechanical Components Slideshow </h3>
-                <p><img src="images/wheel-500.jpg"
-                    srcset="images/wheel-1000.jpg 1000w,
-                    images/wheel-500.jpg 500w"
-                    sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
-
+                <p><img src="poe_images/rendering-cropped.png"
+                    sizes="(max-width: 1000px) 100vw, 100px" alt=""></p>
             </div>
-        </div> <!-- end desc -->
+        </div>
+
+        <div class="row" align ="left">
+            <p>
+            The system starts at the user input at the keys in the front of the box. These are 3D printed with silver filament and rest on a brass rod. The back half of the key lever is attached to a pulley system that is connected to a rotating cylinder that sits on a copper pipe in the center of the box. This copper pipe holds the lasers and allows the rotating cylinders to move about the lasers. When the key is pressed, it rotates the cylinder to a position so that the laser shines through the hole in the cylinder. The laser is pointed down to a 45 degree mirror and is then redirected to another mirror at the back of the box, which is also at a 45 degree angle. The second mirror then redirects the laser up to the top of the clear tubing where the photodiode is mounted.
+            </p>
+            <p>
+              When the user lets go of the key, there is a counterweight that causes the cylinder to block the laser in rest, and the key returns to its resting plane.
+            </p>
+
+
+        </div>
     </section> <!-- end section -->
 
+    <!-- components: enclosure, diode mounting, pully system, laser mounting
+
+    enclosure - 3 IMAGES
+    ================================================== -->
+    <section id='services' class="s-services">
+      <div class="overlay"></div>
+      <div class="contact__line"></div>
+
+      <!-- header -->
+      <div class="row section-header">
+          <div class="col-full">
+              <h1 class="display-2">THE ENCLOSURE</h1>
+          </div>
+
+      <div class="row" data-aos="fade-up">
+          <div class="col-six tab-full" align ="justify">
+            <p>
+              There are false sides and a false bottom in the enclosure design in order to hide the electrical components. The false sides allow the wires for the lasers to reach the false bottom and the false bottom covers the circuits.
+            </p>
+            <p>
+              The enclosure was cut using the Shopbot, the pipes were cut with the horizontal bandsaw, the acrylic (including the acrylic mirror) was laser cut, and the silver looking components were 3D printed.
+            </p>
+            <p>
+              The false bottom was made up of clear acrylic, it was spray painted on one side with black and metallic spray paint and rastered and laser cut on the other side
+            </p>
+          </div>
+
+          <div class="col-six tab-full">
+            <!-- image 1-->
+            <p><img src="poe_images/mechanical/one.jpg"
+                sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
+            <!-- image 2-->
+            <p><img src="poe_images/mechanical/two.jpg"
+                sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
+          </div>
+      </div>
+    </div>
+
+    </section>
+
+    <!-- diode mounting - 1 img
+    ================================================== -->
+    <section id='services' class="s-services">
+      <div class="overlay"></div>
+      <div class="contact__line"></div>
+      <!-- header -->
+      <div class="row section-header has-bottom-sep" data-aos="fade-up">
+          <div class="col-full">
+              <h1 class="display-2">DIODE MOUNTING</h1>
+          </div>
+
+      <div class="row" data-aos="fade-up">
+          <div class="col-six tab-full" align="left">
+            <p>
+              The clear plastic pipes were used to emulate an organ, while the front was designed to emulate a keyboard.
+            </p>
+            <p>
+              The photodiode PCB mounts were mounted on the top of the clear pipes, attached to laser cut acrylic with slots to allow the adjustability of the placement of the diode.
+            </p>
+            <p>
+              We used M3 screws and nuts to fasten the PCB to the acrylic, as there were two holes in the PCB to do this.
+            </p>
+          </div>
+
+          <div class="col-six tab-full">
+            <!-- image 1-->
+            <p><img src="poe_images/mechanical/three.jpg"
+                sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
+          </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- pulley system - 2 IMGS
+    ================================================== -->
+    <section id='services' class="s-services">
+      <div class="overlay"></div>
+      <div class="contact__line"></div>
+      <!-- header -->
+      <div class="row section-header has-bottom-sep" data-aos="fade-up">
+          <div class="col-full">
+              <h1 class="display-2">PULLEY SYSTEM</h1>
+          </div>
+
+      <div class="row" data-aos="fade-up">
+          <div class="col-six tab-full" align="left">
+            <br><br><br><br><br><br><br><br><br><br>
+              <p>
+                The idea behind using a user driven system in order to “turn on” the lights was driven by the idea of sustainability but while also still emulating an “inverted” music box. We wanted each note to be controlled by a cylinder looking object, like the cylinder in a music box, with a hole, instead of an extrusion, for the laser to shine through. Originally, we were planning to control each of these cylinders with individual servos, but realized that would be wasting a lot of servos for a simple movement so we decided to use user driven movement
+              </p>
+              <p>
+                A copper pipe was chosen for the axis of rotation because it was hollow (so we can mount lasers onto it and have the wires go through the center of the tube) and it looked cleaner than PVC, plus had a large diameter to fit all of the wires.
+              </p>
+              <p>
+                The pulley system is made up of orange sewing thread for the rope, a steel pipe for the pulley itself.
+              </p>
+          </div>
+
+          <div class="col-six tab-full">
+            <!-- image 1-->
+            <br>
+            <br>
+            <p><img src="poe_images/mechanical/four.JPG"
+                sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
+
+            <br>
+            <br>
+            <p><img src="poe_images/mechanical/five.jpg"
+                sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
 
 
-    <!-- preloader
+          </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- laser mounting - 3 IMAGES
+    ================================================== -->
+    <section id='services' class="s-services">
+      <div class="overlay"></div>
+      <div class="contact__line"></div>
+
+      <!-- header -->
+      <div class="row section-header">
+          <div class="col-full">
+              <h1 class="display-2">LASER MOUNTING</h1>
+          </div>
+
+      <div class="row" data-aos="fade-up">
+          <div class="col-six tab-full" align ="justify">
+            <p>
+              The holes in the copper pipe to mount the lasers have a slightly larger diameter than the lasers’ for adjustability before securing
+            </p>
+            <p>
+              The mounts slide on and are screw adjustable to tighten around both the laser and the copper pipe
+            </p>
+            <p>
+              The cylinders that rotate around the lasers are cut in half, with tabs on one end, so they can snap around the lasers, after the lasers are mounted (see cross section picture on the right).
+            </p>
+          </div>
+
+          <div class="col-six tab-full">
+            <!-- image 1-->
+            <p><img src="poe_images/mechanical/six.png"
+                sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
+            <!-- image 2-->
+            <p><img src="poe_images/mechanical/seven.png"
+                sizes="(max-width: 1000px) 100vw, 1000px" alt=""></p>
+          </div>
+      </div>
+    </div>
+
+    </section>
+
+        <!-- preloader
     ================================================== -->
     <div id="preloader">
         <div id="loader">
